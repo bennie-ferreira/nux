@@ -1,32 +1,29 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# Diretório padrão de cache/dados do Neovim
+.cache/
+tmp/
+swap/
+session/
+undo/
 
-# Test binary, built with `go test -c`
-*.test
+# Diretório do Neovim dentro de XDG
+.local/share/nvim/
+state/
+shada/
 
-# Code coverage profiles and other test artifacts
-*.out
-coverage.*
-*.coverprofile
-profile.cov
+# Plugin manager (caso use Lazy, Packer, etc.)
+lazy-lock.json
+lazy.nvim/
+plugin/packer_compiled.lua
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+*.bak
 
-# Go workspace file
-go.work
-go.work.sum
-
-# env file
-.env
-
-# Editor/IDE
-# .idea/
-# .vscode/
+# Diretórios ocultos que podem ser criados
+.swp/
+.swo/
+.swn/
