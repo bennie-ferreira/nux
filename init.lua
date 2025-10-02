@@ -20,7 +20,16 @@ require("lazy").setup({
 	{
 		"nvim-tree/nvim-tree.lua",
 		config = function()
-			require("nvim-tree").setup({})
+			require("nvim-tree").setup({
+				filters = {
+					dotfiles = false,
+					custom = { },
+				},
+				git = {
+					enable = true,
+					ignore = false,
+				},
+			})
 		end,
 	},
 
@@ -155,12 +164,7 @@ require("lazy").setup({
 							highlight = "Directory",
 							text_align = "left",
 						},
-					},
-					highlights = {
-						fill = { guibg = "#1a1b26" }, -- fundo do bufferline
-						background = { guibg = "#1a1b26" }, -- fundo dos buffers inativos
-						buffer_selected = { guibg = "#414868" }, -- buffer ativo destacado
-					},
+					}
 				},
 			})
 
